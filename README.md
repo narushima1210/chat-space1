@@ -27,7 +27,7 @@ Things you may want to cover:
 | name | string | null: false |
 | Email | string | null: false |
 | password | string | null: false |
-| groups_id | integer | null: false, foreign_key: true|
+| group_id | integer | null: false, foreign_key: true|
 
 ### Association
 - has_many :posts
@@ -37,9 +37,10 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-| text | string | null: false |
-| image | string | null: false |
+| text | text | null: false |
+| image | text | null: false |
 | user_id | integer | null: false, foreign_key: true|
+| group_id | integer | null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
