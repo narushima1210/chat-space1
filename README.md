@@ -24,11 +24,11 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name | syring | null: false, foreign_key: true |
+| name | string | null: false |
 | Email | string | null: false |
-| pass word | string| null: false |
+| pass word | string | null: false |
 
 ### Association
 - has_many :posts
-- has_many :group_users
+- has_many :groups, through: :group_users
 * ...
