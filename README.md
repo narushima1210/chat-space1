@@ -20,5 +20,15 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
+## usersテーブル
 
+|Column|Type|Options|
+|------|----|-------|
+|name | syring | null: false, foreign_key: true |
+| Email | string | null: false |
+| pass word | string| null: false |
+
+### Association
+- has_many :posts
+- has_many :group_users
 * ...
