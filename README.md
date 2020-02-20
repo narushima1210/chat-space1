@@ -27,10 +27,11 @@ Things you may want to cover:
 | name | string | null: false |
 | Email | string | null: false |
 | password | string | null: false |
+| groups_id | integer | null: false, foreign_key: true|
 
 ### Association
 - has_many :posts
-- has_many :groups, through: :group_users
+- belongs_to :group
 
 ## postsテーブル
 
@@ -42,5 +43,17 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- has_many :groups, through: :group_posts
+- belongs_to :group
+
+## groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+| group_name | string | null: false|
+
+### Association
+
+- has_many :users
+- has_many :posts
+
 * ...
