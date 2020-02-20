@@ -44,28 +44,6 @@ Things you may want to cover:
 ### Association
 - belongs_to :user
 - belongs_to :group
-- has_many :texts
-- has_many :images
-
-## textsテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-| text | text | null: false |
-| post_id | integer | null: false, foreign_key: true |
-
-### Association
-- belongs_to :post
-
-## imageテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-| image | text | null: false |
-| post_id | integer | null: false, foreign_key: true |
-
-### Association
-- belongs_to :post
 
 ## groupsテーブル
 
