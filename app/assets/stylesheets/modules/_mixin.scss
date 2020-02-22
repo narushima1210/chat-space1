@@ -1,8 +1,8 @@
-@mixin flex_align-center{
+@mixin flexAlignCenter{
   display: flex;
   align-items: center;
 }
-@mixin absolute-center{
+@mixin absoluteCenter{
   position: absolute ;
   top: 0;
   right: 0;
