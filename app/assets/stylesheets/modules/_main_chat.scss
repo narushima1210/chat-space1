@@ -1,7 +1,7 @@
 .mainChat{
   height: 100vh;
   width: calc(100vw - 300px);
-  &__header{
+  .header{
     @include flexAlignCenter;
     justify-content: space-between;
     height: 100px;
@@ -40,11 +40,11 @@
     }
   }
 
-  &__body{
+  .body{
     height: calc(100% - 190px);
     padding: 46px 40px ;
     background-color: #fafafa;
-    &__info{
+    .info{
       @include flexAlignCenter;
       padding-top: 46px;
       padding-bottom: 12px;
@@ -64,14 +64,14 @@
     }
   }
 
-  &__form{
+  .form{
     height: 90px;
     background-color:#d2d2d2;
-    &__newMessage{
+    .newMessage{
       @include flexAlignCenter;
       height: 90px;
       padding: 0 40px;
-      &__inputBox{
+      .inputBox{
         @include flexAlignCenter;
         position: relative;
         width: 100%;

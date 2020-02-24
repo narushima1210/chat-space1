@@ -1,33 +1,33 @@
 .mainChat
-  .mainChat__header
-    .mainChat__header__leftBox
+  .header
+    .header__leftBox
       <h2 class = "CurrentGroupName">aaa</h2>
       <ul class = "memberList">
       <li class = "member">Member:</li>
       <li class = "member">satou<li>
-    .mainChat__header__editBtn
+    .header__editBtn
       = link_to "#",class: "submitEditBtn" do
         <p class = "Edit">Edit</p>
-  .mainChat__body
-    .mainChat__body__info
+  .body
+    .info
       <p class = userName>masa</p>
       <p class = timeStamp>2020/02/21(Fri)17:48</p>
-    .mainChat__body__message
+    .message
       <p class = message>何してる？
-    .mainChat__body__info
+    .info
       <p class = userName>masaya</p>
       <p class = timeStamp>2020/02/21(Fri)17:50</p>
-    .mainChat__body__message
+    .message
       <p class = message>勉強
-    .mainChat__body__info
+    .info
       <p class = userName>masa</p>
       <p class = timeStamp>2020/02/21(Fri)17:51</p>
-    .mainChat__body__message
+    .message
       <p class = message>ウェーイ
-  .mainChat__form
-    .mainChat__form__newMessage
-      .mainChat__form__newMessage__inputBox
-        .mainChat__form__newMessage__inputBox__text
+  .form
+    .newMessage
+      .inputBox
+        .inputBox__text
           %input{type: "text",class: "inputBoxText",placeholder: "type a message"}
           %label{class: "inputBoxImage"}
             <i class="fas fa-images"></i>
