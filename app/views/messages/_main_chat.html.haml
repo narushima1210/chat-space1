@@ -1,0 +1,37 @@
+.mainChat
+  .header
+    .header__leftBox
+      %h2.CurrentGroupName aaa
+      %ul.memberList
+        %li.member Member:
+        %li.member satou
+    .header__editBtn
+      = link_to "#",class: "submitEditBtn" do
+        %p.Edit Edit
+  .body
+    .info
+      %p.userName masa
+      %p.timeStamp 2020/02/21(Fri)17:48
+    .message
+      %p.message 何してる？
+    .info
+      %p.userName masaya
+      %p.timeStamp 2020/02/21(Fri)17:50
+    .message
+      %p.message 勉強
+    .info
+      %p.userName masa
+      %p.timeStamp 2020/02/21(Fri)17:51
+    .message
+      %p.message ウェーイ
+  .form
+    .newMessage
+      .inputBox
+        .inputBox__text
+          %input{type: "text",class: "inputBoxText",placeholder: "type a message"}
+          %label{class: "inputBoxImage"}
+            <i class="fas fa-images"></i>
+            %input{type: "file",class: "inputImageFile"}
+      .sendBox
+        %input{type: "submit", value: "send",class: "send"}
+

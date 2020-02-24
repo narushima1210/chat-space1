@@ -1,0 +1,21 @@
+.sideBar
+  .header
+    .topItems
+      .topItems__name
+        %p.currentUserName masa
+      .topItems__icons
+      = link_to "#", class: "icon" do
+        <i class='far fa-edit'></i>
+      = link_to "#", class: "icon" do
+        <i class="fas fa-cog"></i>
+  .groupLists
+    = link_to "#",class: "groupId" do
+      .group
+        %p.groupName aaa
+        %p.latestMessage メッセージはまだありません
+      .group
+        %p.groupName bbb
+        %p.latestMessage おーはよー
+      .group
+        %p.groupName ccc
+        %p.latestMessage メッセージはまだありません

@@ -1,0 +1,115 @@
+.mainChat{
+  height: 100vh;
+  width: calc(100vw - 300px);
+  .header{
+    @include flexAlignCenter;
+    justify-content: space-between;
+    height: 100px;
+    padding:0 40px ;
+    border-bottom: solid 1px  #eeeeee;
+    background-color:$mainWhite;
+    &__leftBox{
+      margin-top: 35px;
+      .CurrentGroupName{
+        margin-bottom: 15px;
+        color: #333333;
+        font-size: 20px;
+      }
+      .memberList{
+        display: flex;
+      }
+      .member{
+        margin-right: 5px;
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+    &__editBtn{
+      width: 72px;
+      height: 40px;
+      margin: 28px 0;
+      padding: 0 20px;
+      border: solid 1px $mainBlue;
+    }
+    .submitEditBtn{
+      text-decoration: none;
+    }
+    .Edit{
+      color: $mainBlue;
+      line-height: 40px;
+    }
+  }
+
+  .body{
+    height: calc(100% - 190px);
+    padding: 46px 40px ;
+    background-color: #fafafa;
+    .info{
+      @include flexAlignCenter;
+      padding-top: 46px;
+      padding-bottom: 12px;
+      .userName{
+        color: #333333;
+        font-size: 16px;
+      }
+      .timeStamp{
+        margin-left: 7px;
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+    .message{
+      color: #434a54;
+      font-size: 14px;
+    }
+  }
+
+  .form{
+    height: 90px;
+    background-color:#d2d2d2;
+    .newMessage{
+      @include flexAlignCenter;
+      height: 90px;
+      padding: 0 40px;
+      .inputBox{
+        @include flexAlignCenter;
+        position: relative;
+        width: 100%;
+        height: 90px;
+        &__text{
+          display: flex;
+          position: relative;
+          width: 100%;
+          height: 50px;
+          padding: 0 10px;
+          .inputBoxText{
+            width: 100%;
+            height: 50px;
+          }
+          .fas,fa-images{
+            position: absolute;
+            right: 20px;
+            line-height: 50px;
+          }
+          .inputImageFile{
+            display: none;
+          }
+        }
+      }
+    }
+    .sendBox{
+      position: relative;
+      width: 90px;
+      height: 50px;
+      background-color: $mainBlue;
+      .send{
+        @include absoluteCenter;
+        border: none;
+        background-color: $mainBlue;
+        color:$mainWhite;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
