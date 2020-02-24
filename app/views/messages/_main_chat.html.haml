@@ -1,29 +1,29 @@
 .mainChat
   .header
     .header__leftBox
-      <h2 class = "CurrentGroupName">aaa</h2>
-      <ul class = "memberList">
-      <li class = "member">Member:</li>
-      <li class = "member">satou<li>
+      %h2.CurrentGroupName aaa
+      %ul.memberList
+        %li.member Member:
+        %li.member satou
     .header__editBtn
       = link_to "#",class: "submitEditBtn" do
-        <p class = "Edit">Edit</p>
+        %p.Edit Edit
   .body
     .info
-      <p class = userName>masa</p>
-      <p class = timeStamp>2020/02/21(Fri)17:48</p>
+      %p.userName masa
+      %p.timeStamp 2020/02/21(Fri)17:48
     .message
-      <p class = message>何してる？
+      %p.message 何してる？
     .info
-      <p class = userName>masaya</p>
-      <p class = timeStamp>2020/02/21(Fri)17:50</p>
+      %p.userName masaya
+      %p.timeStamp 2020/02/21(Fri)17:50
     .message
-      <p class = message>勉強
+      %p.message 勉強
     .info
-      <p class = userName>masa</p>
-      <p class = timeStamp>2020/02/21(Fri)17:51</p>
+      %p.userName masa
+      %p.timeStamp 2020/02/21(Fri)17:51
     .message
-      <p class = message>ウェーイ
+      %p.message ウェーイ
   .form
     .newMessage
       .inputBox

@@ -2,20 +2,20 @@
   .header
     .topItems
       .topItems__name
-        masa
+        %p.currentUserName masa
       .topItems__icons
-        = link_to "#", class: "icon" do
-          <i class='far fa-edit'></i>
-        = link_to "#", class: "icon" do
-          <i class="fas fa-cog"></i>
+      = link_to "#", class: "icon" do
+        <i class='far fa-edit'></i>
+      = link_to "#", class: "icon" do
+        <i class="fas fa-cog"></i>
   .groupLists
     = link_to "#",class: "groupId" do
       .group
-        <p class = "groupName">aaa</p>
-        <p class = "latestMessage">メッセージはまだありません
+        %p.groupName aaa
+        %p.latestMessage メッセージはまだありません
       .group
-        <p class = "groupName">bbb</p>
-        <p class = "latestMessage">おーはよー
+        %p.groupName bbb
+        %p.latestMessage おーはよー
       .group
-        <p class = "groupName">ccc</p>
-        <p class = "latestMessage">メッセージはまだありません
+        %p.groupName ccc
+        %p.latestMessage メッセージはまだありません
