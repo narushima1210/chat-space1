@@ -58,4 +58,9 @@ gem 'haml-rails'
 
 gem 'pry-rails'
 
+gem 'carrierwave'
+
+gem 'mini_magick', require: 'mini_magick'
+
+
 gem 'font-awesome-sass'
