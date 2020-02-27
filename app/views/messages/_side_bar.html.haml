@@ -10,13 +10,8 @@
         <i class="fas fa-cog"></i>
 
   .groupLists
-    = link_to "#",class: "groupId" do
+    - current_user.groups.each do |group|
       .group
-        %p.groupName aaa
-        %p.latestMessage メッセージはまだありません
-      .group
-        %p.groupName bbb
-        %p.latestMessage おーはよー
-      .group
-        %p.groupName ccc
-        %p.latestMessage メッセージはまだありません
+        = link_to "#",class: "groupId" do
+          %p.groupName aaa
+          %p.latestMessage メッセージはまだありません
