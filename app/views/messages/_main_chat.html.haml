@@ -1,37 +1,25 @@
 .mainChat
   .header
     .header__leftBox
-      %h2.CurrentGroupName aaa
+      %h2.CurrentGroupName
+        = @group.name
       %ul.memberList
         %li.member Member:
-        %li.member satou
+        - @group.users.each do |user| 
+          %li.member
+            = user.name
     .header__editBtn
-      = link_to "#",class: "submitEditBtn" do
+      = link_to edit_group_path(@group),class: "submitEditBtn" do
         %p.Edit Edit
   .body
-    .info
-      %p.userName masa
-      %p.timeStamp 2020/02/21(Fri)17:48
-    .message
-      %p.message 何してる？
-    .info
-      %p.userName masaya
-      %p.timeStamp 2020/02/21(Fri)17:50
-    .message
-      %p.message 勉強
-    .info
-      %p.userName masa
-      %p.timeStamp 2020/02/21(Fri)17:51
-    .message
-      %p.message ウェーイ
+    = render @messages
   .form
-    .newMessage
-      .inputBox
-        .inputBox__text
-          %input{type: "text",class: "inputBoxText",placeholder: "type a message"}
-          %label{class: "inputBoxImage"}
-            <i class="fas fa-images"></i>
-            %input{type: "file",class: "inputImageFile"}
-      .sendBox
-        %input{type: "submit", value: "send",class: "send"}
-
+    .inputBox
+      .inputBox__text
+        = form_for [@group, @message] do |form|
+          = form.text_field :content, class: 'inputBoxText',placeholder: "type a message"
+          .inputBox__text__mask
+            = form.label :image, class: "inputBoxImage" do
+              <i class="fas fa-images"></i>
+              = form.file_field :image, class: "inputImageFile"
+          = form.submit "send", class: "sendBox"

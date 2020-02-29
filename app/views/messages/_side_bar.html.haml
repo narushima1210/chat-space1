@@ -12,6 +12,8 @@
   .groupLists
     - current_user.groups.each do |group|
       .group
-        = link_to "#",class: "groupId" do
-          %p.groupName aaa
-          %p.latestMessage メッセージはまだありません
+        = link_to group_messages_path(group),class: "groupId" do
+          %p.groupName 
+            = group.name
+          %p.latestMessage 
+            = group.show_last_message

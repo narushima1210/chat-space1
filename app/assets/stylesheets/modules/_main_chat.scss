@@ -58,57 +58,69 @@
         font-size: 12px;
       }
     }
-    .message{
+    .message__content{
       color: #434a54;
       font-size: 14px;
     }
   }
 
   .form{
+    @include flexAlignCenter;
     height: 90px;
+    padding: 0 40px;
     background-color:#d2d2d2;
-    .newMessage{
+    .inputBox{
       @include flexAlignCenter;
+      position: relative;
+      width: 100%;
       height: 90px;
-      padding: 0 40px;
-      .inputBox{
-        @include flexAlignCenter;
+      &__text{
+        display: flex;
         position: relative;
         width: 100%;
-        height: 90px;
-        &__text{
-          display: flex;
-          position: relative;
+        height: 100%;
+        padding: 0 10px;
+        .inputBoxText{
           width: 100%;
-          height: 50px;
-          padding: 0 10px;
-          .inputBoxText{
-            width: 100%;
-            height: 50px;
-          }
-          .fas,fa-images{
-            position: absolute;
-            right: 20px;
-            line-height: 50px;
-          }
+          height: 50%;
+        }
+        .form__sendBox{
+          width: 100%;
+          height: 100%;
+        }
+
+        .new_message{
+          width: 100%;
+          height: 100px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: relative;
+        }
+        .field_with_errors{
+          width: 100%;
+          height: 100px;
+          @include flexAlignCenter;
+        }
+        &__mask{
+          position: absolute;
+          right: 95px;
           .inputImageFile{
             display: none;
           }
         }
       }
     }
+  
+  
     .sendBox{
       position: relative;
       width: 90px;
       height: 50px;
+      margin-left: 10px;
       background-color: $mainBlue;
-      .send{
-        @include absoluteCenter;
-        border: none;
-        background-color: $mainBlue;
-        color:$mainWhite;
-        font-size: 25px;
-      }
+      color: $mainWhite;
+      font-size: 20px;
     }
   }
 }
