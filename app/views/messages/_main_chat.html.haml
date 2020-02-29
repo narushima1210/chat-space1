@@ -9,7 +9,7 @@
           %li.member
             = user.name
     .header__editBtn
-      = link_to "#",class: "submitEditBtn" do
+      = link_to edit_group_path(@group),class: "submitEditBtn" do
         %p.Edit Edit
   .body
     = render @messages
