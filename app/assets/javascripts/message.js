@@ -54,6 +54,7 @@ $(function(){
     .done(function(data){
       var html =buildHTML(data);
       $('.body').append(html);
+      $('.body').animate({ scrollTop: $('.body')[0].scrollHeight});
       $('form')[0].reset();
     })
   });
