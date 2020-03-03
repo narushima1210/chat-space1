@@ -2,23 +2,23 @@ $(function(){
   function buildHTML(data){
     if ( data.image ) {
       var html =
-      `<div class = "messages">
-          <div class = "info">
-            <p class = "userName">
-              ${data.user_name}
-            </p>
-            <p class = "timeStamp">
-              ${data.created_at}
-            </p>
-          </div>
-          <div class = "message">
-            <p class = "message__content">
-              ${data.content}
-            </p>
-          </div>
-          <img src = ${data.image} >
+        `<div class = "messages">
+            <div class = "info">
+              <p class = "userName">
+                ${data.user_name}
+              </p>
+              <p class = "timeStamp">
+                ${data.created_at}
+              </p>
+            </div>
+            <div class = "message">
+              <p class = "message__content">
+                ${data.content}
+              </p>
+            </div>
+            <img src = ${data.image} >
         </div>`
-      return message;
+      return html;
     } else {
       var html =
       `<div class = "messages">
@@ -60,6 +60,7 @@ $(function(){
     })
     .fail(function(){
       alert("メッセージ送信に失敗しました");
+      $('.sendBox').prop('disabled', false);
     })
   });
 })
