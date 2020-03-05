@@ -105,6 +105,6 @@ $(function(){
   })
 
   if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-        setInterval(reloadMessages, 5000);
+        setInterval(reloadMessages, 7000);
   }
 })
