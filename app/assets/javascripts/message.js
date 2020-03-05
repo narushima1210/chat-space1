@@ -65,7 +65,6 @@ $(function(){
     
     
     .done(function(message) {
-      console.log(message)
       if (message.length !==0) {
         var insertHTML = ''
         $.each(message, function(i, message) {
