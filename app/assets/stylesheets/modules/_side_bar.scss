@@ -1,6 +1,7 @@
 .sideBar{
   width: 300px;
   height: 100vh;
+  bottom: 0;
   .header{
     @include flexAlignCenter;
     height: 100px;
@@ -26,9 +27,10 @@
     }
   }
   .groupLists{
-    height: calc(100% - 100px);
+    height: 100vh;
     padding: 20px 20px 0;
     background-color: #2f3e51;
+    overflow: scroll;
     .groupId{
       text-decoration: none;
       color: $mainWhite;

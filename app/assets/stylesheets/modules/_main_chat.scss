@@ -1,6 +1,7 @@
 .mainChat{
   height: 100vh;
   width: calc(100vw - 300px);
+
   .header{
     @include flexAlignCenter;
     justify-content: space-between;
@@ -41,33 +42,39 @@
   }
 
   .body{
-    height: calc(100% - 190px);
+    height: 100%;
     padding: 46px 40px ;
     background-color: #fafafa;
     overflow: scroll;
-    .info{
-      @include flexAlignCenter;
-      padding-top: 46px;
-      padding-bottom: 12px;
-      .userName{
-        color: #333333;
-        font-size: 16px;
+    .messages{
+      margin-bottom: 90px;
+      .info{
+        @include flexAlignCenter;
+        padding-top: 46px;
+        padding-bottom: 12px;
+        .userName{
+          color: #333333;
+          font-size: 16px;
+        }
+        .timeStamp{
+          margin-left: 7px;
+          color: #999999;
+          font-size: 12px;
+        }
       }
-      .timeStamp{
-        margin-left: 7px;
-        color: #999999;
-        font-size: 12px;
+      .message__content{
+        color: #434a54;
+        font-size: 14px;
       }
-    }
-    .message__content{
-      color: #434a54;
-      font-size: 14px;
     }
   }
 
   .form{
     @include flexAlignCenter;
     height: 90px;
+    width: calc(100vw - 300px);
+    position: fixed;
+    bottom: 0;
     padding: 0 40px;
     background-color:#d2d2d2;
     .inputBox{
